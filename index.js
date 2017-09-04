@@ -34,12 +34,12 @@ var characterColor = [120,0,200]
 var screenWidth = 10
 var screenHeight = 5
 
-randomColorForever()  
+// randomColorForever()  
 
-// async.series([
-//   clearScreen,
-//   (cb)=>drawCircle(2.5, cb),
-// ])
+async.series([
+  // clearScreen,
+  (cb)=>drawCircle(2.5, cb),
+])
 
 function drawCircle(radius, cb){
   eachPixel((pos, cb)=> {
@@ -183,11 +183,11 @@ function rgbFlash(pos, next){
 
 // eachPixel(function(pos, next){
 //   // flash(pos,[120,0,200], cb)
-//   // async.timesSeries(8, function(amp, cb){
-//   //   var heat = Math.pow(2,amp)-1
-//   //   push(pos, [heat,heat,heat], cb)
-//   // })
-//   push(pos, [120,0,200])
+//   async.timesSeries(8, function(amp, cb){
+//     var heat = Math.pow(2,amp)-1
+//     push(pos, [heat,heat,heat], cb)
+//   })
+//   // push(pos, [120,0,200])
 //   next()
 //   // cb()
 // })
